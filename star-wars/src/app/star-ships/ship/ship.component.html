@@ -1,0 +1,42 @@
+<div class="container-fluid bg-dark py-4">
+
+    <div class="container card mb-3 bg-dark text-light" >
+        <div class="row">
+            <img src="{{ urlImg }}/{{ ship | id }}.jpg" style="max-height: 600px;" onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'" class="card-img-top" alt="Star-Ship" />
+    
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ship.name | titlecase}}</h5>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint omnis labore aspernatur hic blanditiis aliquid tempore debitis velit, nam quae fuga porro eius sit ipsam? Neque voluptate aut dolorem quasi quaerat id nemo fugit maiores, voluptatibus sit magni saepe aliquid deserunt assumenda doloribus voluptatum voluptas voluptatem atque perspiciatis provident architecto?
+            </p>
+            <div class="container">
+                <div class="row">
+    
+                    <p class="card-text col">
+                        <small class="">Model : {{ship.model}}</small>
+                    </p>
+                    <p class="card-text col">
+                        <small class="">Manufacturer : {{ship.manufacturer}}</small>
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="card-text col">
+                        <small class="">Length : {{ship.length}}</small>
+                    </p>
+                    <p class="card-text col">
+                        <small class="">Crew : {{ship.crew}}</small>
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="card-text col">
+                        <small class="">Cargo Capacity :  {{ship.cargo_capacity}}</small>
+                    </p>
+                    <p class="card-text col">
+                        <small class="">Cost In Credits : {{ship.cost_in_credits}}</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

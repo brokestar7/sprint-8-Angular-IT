@@ -1,17 +1,10 @@
-<div class="container-fluid bg-dark pt-4 vh-100">
+<div class="container-fluid bg-dark py-4 ">
 
-    <div class="container bg-dark">
-    
-        <ul class="list-group gap-2 bg-dark">
-            <li class="list-group-item bg-dark text-light ">A third item</li>
-            <li class="list-group-item bg-dark text-light ">A third item</li>
-            <li class="list-group-item bg-dark text-light ">A third item</li>
-            <li class="list-group-item bg-dark text-light ">A third item</li>
-            <li class="list-group-item bg-dark text-light ">A third item</li>
-            <li class="list-group-item bg-dark text-light ">A third item</li>
-            <li class="list-group-item bg-dark text-light ">A third item</li>
-            <li class="list-group-item bg-dark text-light ">A third item</li>
-            <li class="list-group-item bg-dark text-light ">A third item</li>
-        </ul>
-    </div>
+        <div *ngFor="let ship of starships" class="card-group m-2" [routerLink]="['/ship/ship/', ship | id]">
+
+            <div  class="card-body bg-secondary">
+                <h5 class="card-title text-light">{{ ship.name | uppercase }}</h5>
+                <p class="card-text text-light">{{ ship.model | titlecase }}</p>
+            </div>
+        </div>
 </div>
